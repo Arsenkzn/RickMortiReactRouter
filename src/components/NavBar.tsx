@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <ul>
+    <ul className="no-bullets">
     <li style={{ marginRight: '20px' }}>
       <Link to="/">Главная</Link>
     </li>
