@@ -22,12 +22,13 @@ export function useLogin(): LoginContextValue {
 }
 
 
-export function LoginProvider({children}) {
+export function LoginProvider({ children }) {
     const [user, setUser] = useState(null);
 
     const signin = (newUser: UserType, callback: () => void) => {
         setUser(newUser);
         localStorage.setItem('user', newUser);
+        console.log(newUser);
         callback();
     }
     const signout = (callback: () => void) => {

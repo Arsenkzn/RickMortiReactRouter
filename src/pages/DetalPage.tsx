@@ -5,8 +5,6 @@ import episodes from '../data/episodes.json';
 import locations from '../data/locations.json';
 import { Item } from '../components/Item'
 
-
-
 interface Props {
     category: string;
 }

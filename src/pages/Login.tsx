@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useLogin } from "../Login/LoginProvider";
 
-export function  Login() {
+export default function  Login() {
   const navigate = useNavigate();
   const location = useLocation();
   const log = useLogin();
@@ -10,6 +10,8 @@ export function  Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    
+
 
     const formData = new FormData(event.currentTarget);
     const username = formData.get('username')

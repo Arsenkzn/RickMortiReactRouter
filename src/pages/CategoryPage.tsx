@@ -24,13 +24,6 @@ const CategoryPage: FC<Props> = ({ category }) => {
             setItems(episodes);
             break;
         }
-        // if (category === 'characters') {
-        //     setItems(characters);
-        // } else if (category === 'location') {
-        //     setItems(locations);
-        // } else if (category === 'episode') {
-        //     setItems(episodes);
-        // }
     }, [category]);
 
     const renderItemDetails = (item: Item) => {
