@@ -3,17 +3,7 @@ import { Link } from 'react-router-dom';
 import characters from '../data/characters.json';
 import locations from '../data/locations.json';
 import episodes from '../data/episodes.json';
-
-interface Item {
-    id: number;
-    name?: string;
-    title?: string;
-    status?: string;
-    type?: string;
-    gender?: string;
-    created?: number;
-    image?: string;
-}
+import { Item } from '../components/Item'
 
 interface Props {
     category: string;
@@ -23,13 +13,24 @@ const CategoryPage: FC<Props> = ({ category }) => {
     const [items, setItems] = useState<Item[]>([]);
 
     useEffect(() => {
-        if (category === 'characters') {
+        switch(category){
+            case 'characters':
             setItems(characters);
-        } else if (category === 'location') {
+            break;
+            case 'location':
             setItems(locations);
-        } else if (category === 'episode') {
+            break;
+            case 'episode':
             setItems(episodes);
+            break;
         }
+        // if (category === 'characters') {
+        //     setItems(characters);
+        // } else if (category === 'location') {
+        //     setItems(locations);
+        // } else if (category === 'episode') {
+        //     setItems(episodes);
+        // }
     }, [category]);
 
     const renderItemDetails = (item: Item) => {
