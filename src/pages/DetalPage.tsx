@@ -3,17 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import characters from '../data/characters.json';
 import episodes from '../data/episodes.json';
 import locations from '../data/locations.json';
-
-interface Item {
-    id: number;
-    name?: string;
-    title?: string;
-    status?: string;
-    type?: string;
-    gender?: string;
-    created?: number;
-    image?: string;
-}
+import { Item } from '../components/Item'
 
 interface Props {
     category: string;
