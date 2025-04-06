@@ -2,9 +2,9 @@ import { useLogin } from '../Login/LoginProvider';
 //import  {lazy} from 'react';
 import { useNavigate } from 'react-router-dom';
 
-// const useLogin = lazy(() => import('../Login/LoginProvider').then(module => ({
-//   default.module.useLogin,
-// })))
+// // const useLogin = lazy(() => import('../Login/LoginProvider').then(module => ({
+// //   default: module.useLogin,
+// // })))
 
 export function LoginStatus() {
   const log = useLogin();
