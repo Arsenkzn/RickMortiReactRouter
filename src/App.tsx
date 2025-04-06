@@ -1,30 +1,35 @@
-import React from 'react';
+import React, {lazy, useState} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/NavBar';
-import HomePage from './pages/HomePage';
-import CategoryPage from './pages/CategoryPage';
-import DetailPage from './pages/DetalPage';
-import NotFound from './components/NotFound';
-
-
 import './App.css'
-
+import {LoginProvider} from './Login/LoginProvider';
+const PrivatRoute = lazy(() => import('./components/PrivatRoute'));
+const HomePage = lazy(() => import('./pages/HomePage'))
+const Navbar = lazy(() => import('./components/NavBar'))
+const CategoryPage = lazy(() => import('./pages/CategoryPage'));
+const DetailPage = lazy(() => import('./pages/DetalPage'));
+const NotFound = lazy(() => import('./components/NotFound'));
+const Login = lazy(() => import('./pages/Login'));
 
 const App: React.FC = () => {
+  
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} /> 
-        <Route path="/characters" element={<CategoryPage category="characters" />} />
-        <Route path="/locations" element={<CategoryPage category="location" />} />
-        <Route path="/episodes" element={<CategoryPage category="episode" />} />
-        <Route path="/characters/:id" element={<DetailPage category="characters" />} />
-        <Route path="/location/:id" element={<DetailPage category="locations" />} />
-        <Route path="/episode/:id" element={<DetailPage category="episodes" />} />
-
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <LoginProvider>
+        <Navbar />
+        <Routes>
+          <Route>
+            <Route path="/" element={<HomePage />} /> 
+            <Route path="/characters" element={<PrivatRoute><CategoryPage category="characters" /></PrivatRoute>} />
+            <Route path="/locations" element={<PrivatRoute><CategoryPage category="location" /></PrivatRoute>} />
+            <Route path="/episodes" element={<PrivatRoute><CategoryPage category="episode" /></PrivatRoute>} />
+            <Route path="/characters/:id" element={<PrivatRoute><DetailPage category="characters" /></PrivatRoute>} />
+            <Route path="/location/:id" element={<PrivatRoute><DetailPage category="locations" /></PrivatRoute>} />
+            <Route path="/episode/:id" element={<PrivatRoute><DetailPage category="episodes" /></PrivatRoute>} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/login" element={<Login />} />
+          </Route>
+        </Routes>
+      </LoginProvider>
     </Router>
   );
 };
