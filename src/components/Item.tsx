@@ -7,4 +7,8 @@ export interface Item {
     gender?: string;
     created?: number;
     image?: string;
+    dimension?: string;
+    air_date?: string;
+    episode?: string;
+    species?: string;
 }

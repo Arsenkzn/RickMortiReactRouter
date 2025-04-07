@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { LoginStatus } from '../components/LoginStatus';
+import { Suspense } from 'react';
 
 export const Navbar = () => {
   return (
@@ -21,6 +22,11 @@ export const Navbar = () => {
            <li>
             <Link to="/login">Login</Link>
            </li>
+           <main>
+            <Suspense fallback={<h3>Loading....</h3>}>
+              <Outlet />
+            </Suspense>
+           </main>
       </ul>
   </>
   );
