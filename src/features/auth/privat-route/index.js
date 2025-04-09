@@ -1,1 +1,1 @@
-export * from './PrivatRoute'
+export * from '../privat-route'

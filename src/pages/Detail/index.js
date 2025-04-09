@@ -1,2 +1,1 @@
-export * from './DetalPage'
-export * from './categoryPage2'
+export * from '../Detail'

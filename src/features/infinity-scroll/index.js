@@ -1,2 +1,1 @@
-export * from './InfinityScroll'
-export * from './InfinityScroll2'
+export * from "../infinity-scroll";

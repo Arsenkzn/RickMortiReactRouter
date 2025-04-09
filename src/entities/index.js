@@ -1,1 +1,1 @@
-export * from './Item.ts'
+export * from '../entities'

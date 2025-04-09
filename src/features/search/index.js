@@ -1,2 +1,1 @@
-export * from './useFetchItemDetails'
-export * from './useSearch2'
+export * from '../search'
