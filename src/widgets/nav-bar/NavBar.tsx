@@ -1,5 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
-import { LoginStatus } from '../components/LoginStatus';
+import { LoginStatus } from '../../features/auth/login-status/LoginStatus';
 import { Suspense } from 'react';
 
 export const Navbar = () => {

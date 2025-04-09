@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { useLogin } from "../Login/LoginProvider";
+import { useLogin } from "../features/auth/LoginProvider";
 
 export default function  Login() {
   const navigate = useNavigate();

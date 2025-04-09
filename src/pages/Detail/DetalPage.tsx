@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import useFetchItemDetails from '../hooks/useFetchItemDetails';
+import useFetchItemDetails from '../../features/search/useFetchItemDetails';
 
 interface Props {
     category: string;

@@ -1,7 +1,7 @@
 import {useState} from 'react';
-import useSearch2 from './hooks/useSearch2';
-import './App.css'
-import { Item } from './components/Item'
+import useSearch2 from '../search/useSearch2';
+//import './App.css'
+import { Item } from '../../entities/Item'
 import { Link } from 'react-router-dom';
 
 

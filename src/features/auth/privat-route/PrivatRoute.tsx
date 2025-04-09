@@ -1,5 +1,5 @@
 import { Navigate, useLocation } from "react-router-dom";
-import { useLogin } from "../Login/LoginProvider";
+import { useLogin } from "../LoginProvider";
 
 export default function PrivatRoute({ children }) {
     const log = useLogin();

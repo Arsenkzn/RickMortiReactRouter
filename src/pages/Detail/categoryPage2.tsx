@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { Item } from '../components/Item'; 
-import useSearch2 from '../hooks/useSearch2';
+import { Item } from '../../entities/Item'; 
+import useSearch2 from '../../features/search/useSearch2';
 
 
 interface Props {

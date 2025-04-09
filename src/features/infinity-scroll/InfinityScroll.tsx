@@ -1,6 +1,6 @@
 import {useState} from 'react';
-import useSearch from './hooks/useSearch';
-import './App.css'
+import useSearch from '../search/useSearch2';
+//import './App.css'
 
 export default function InfinityScroll() {
 
