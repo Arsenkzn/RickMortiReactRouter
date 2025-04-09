@@ -1,15 +1,15 @@
 import React, {lazy} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
-import {LoginProvider} from './Login/LoginProvider';
-import ErrorBoundary from './ErrorBoundry';
-const PrivatRoute = lazy(() => import('./components/PrivatRoute'));
-const HomePage = lazy(() => import('./pages/HomePage'))
-const Navbar = lazy(() => import('./components/NavBar'))
-const CategoryPage = lazy(() => import('./pages/categoryPage2'));
-const DetailPage = lazy(() => import('./pages/DetalPage'));
-const NotFound = lazy(() => import('./components/NotFound'));
-const Login = lazy(() => import('./pages/Login'));
+import {LoginProvider} from '../Login/LoginProvider';
+import ErrorBoundary from '../ErrorBoundry';
+const PrivatRoute = lazy(() => import('../components/PrivatRoute'));
+const HomePage = lazy(() => import('../pages/HomePage'))
+const Navbar = lazy(() => import('../components/NavBar'))
+const CategoryPage = lazy(() => import('../pages/categoryPage2'));
+const DetailPage = lazy(() => import('../pages/DetalPage'));
+const NotFound = lazy(() => import('../components/NotFound'));
+const Login = lazy(() => import('../pages/Login'));
 
 const App: React.FC = () => {
   
