@@ -1,6 +1,6 @@
 import React, { lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import './app.css'
+import "./app.css";
 
 import { LoginProvider } from "../features/auth/LoginProvider";
 import ErrorBoundary from "../shared/error-handling/ErrorBoundry";
@@ -11,7 +11,7 @@ const HomePage = lazy(() => import("../pages/Home/HomePage"));
 const Navbar = lazy(() => import("../widgets/nav-bar/NavBar"));
 const CategoryPage = lazy(() => import("../pages/Detail/categoryPage2"));
 const DetailPage = lazy(() => import("../pages/Detail/DetalPage"));
-const NotFound = lazy(() => import("../pages/not-found/NotFound"));
+const NotFound = lazy(() => import("../pages/404/NotFound"));
 const Login = lazy(() => import("../pages/Login"));
 
 const App: React.FC = () => {
